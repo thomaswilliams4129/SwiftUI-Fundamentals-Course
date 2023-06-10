@@ -10,12 +10,13 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isNight = false
+    
     var weeklyWeather: [WeatherDay] = getWeeklyWeather()
     
     var body: some View {
         ZStack {
             // background
-            BackgroundView(isNight: $isNight)
+            BackgroundView(isNight: isNight)
             
             // Main VStack
             VStack {
@@ -82,13 +83,13 @@ struct WeatherDayView: View {
 
 struct BackgroundView: View {
     
-    @Binding var isNight: Bool
+    var isNight: Bool
     
     var body: some View {
         LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]),
                        startPoint: .topLeading,
                        endPoint: .bottom)
-        .edgesIgnoringSafeArea(.all)
+        .ignoresSafeArea()
     }
 }
 
@@ -145,10 +146,10 @@ func getWeeklyWeather() -> [WeatherDay] {
     var weeklyWeather: [WeatherDay] = []
     
     weeklyWeather.append(WeatherDay(dayoftheWeek: "TUE", imageName: "cloud.sun.fill", temperature: 75))
-    weeklyWeather.append(WeatherDay(dayoftheWeek: "WED", imageName: "cloud.sun.fill", temperature: 75))
-    weeklyWeather.append(WeatherDay(dayoftheWeek: "THU", imageName: "cloud.sun.fill", temperature: 75))
-    weeklyWeather.append(WeatherDay(dayoftheWeek: "FRI", imageName: "cloud.sun.fill", temperature: 75))
-    weeklyWeather.append(WeatherDay(dayoftheWeek: "SAT", imageName: "cloud.sun.fill", temperature: 75))
+    weeklyWeather.append(WeatherDay(dayoftheWeek: "WED", imageName: "sun.max.fill", temperature: 83))
+    weeklyWeather.append(WeatherDay(dayoftheWeek: "THU", imageName: "cloud.fill", temperature: 81))
+    weeklyWeather.append(WeatherDay(dayoftheWeek: "FRI", imageName: "cloud.bolt.fill", temperature: 79))
+    weeklyWeather.append(WeatherDay(dayoftheWeek: "SAT", imageName: "cloud.sun.fill", temperature: 82))
     
     
     return weeklyWeather
