@@ -43,9 +43,6 @@ struct ContentView: View {
                 
                 Spacer()
             }
-            
-                        
-            
         }
     }
 }
@@ -53,31 +50,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-struct WeatherDayView: View {
-    
-    var dayOfWeek: String
-    var imageName: String
-    var temperature: Int
-    
-    var body: some View {
-        VStack {
-            Text(dayOfWeek)
-                .font(.system(size: 16, weight: .medium, design: .default))
-                .foregroundColor(.white)
-            
-            Image(systemName: imageName)
-                .renderingMode(.original)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 40, height: 40)
-            
-            Text("\(temperature)º")
-                .font(.system(size: 28, weight: .medium, design: .default))
-                .foregroundColor(.white)
-        }
     }
 }
 
@@ -124,6 +96,31 @@ struct MainWeatherStatusView: View {
                 .foregroundColor(.white)
         }
         .padding(.bottom, 40)
+    }
+}
+
+struct WeatherDayView: View {
+    
+    var dayOfWeek: String
+    var imageName: String
+    var temperature: Int
+    
+    var body: some View {
+        VStack {
+            Text(dayOfWeek)
+                .font(.system(size: 16, weight: .medium, design: .default))
+                .foregroundColor(.white)
+            
+            Image(systemName: imageName)
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 40, height: 40)
+            
+            Text("\(temperature)º")
+                .font(.system(size: 28, weight: .medium, design: .default))
+                .foregroundColor(.white)
+        }
     }
 }
 
