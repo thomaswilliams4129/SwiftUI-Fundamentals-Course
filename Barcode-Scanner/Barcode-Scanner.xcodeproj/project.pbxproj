@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82353F6D2A49E1A70034A137 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82353F6C2A49E1A70034A137 /* ScannerView.swift */; };
 		82EEB5DF2A41FC9500C29AD7 /* Barcode_ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EEB5DE2A41FC9500C29AD7 /* Barcode_ScannerApp.swift */; };
 		82EEB5E32A41FC9600C29AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82EEB5E22A41FC9600C29AD7 /* Assets.xcassets */; };
 		82EEB5E62A41FC9600C29AD7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82EEB5E52A41FC9600C29AD7 /* Preview Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82353F6C2A49E1A70034A137 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		82EEB5DB2A41FC9500C29AD7 /* Barcode-Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Barcode-Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82EEB5DE2A41FC9500C29AD7 /* Barcode_ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode_ScannerApp.swift; sourceTree = "<group>"; };
 		82EEB5E22A41FC9600C29AD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		82EEB5F12A4211E600C29AD7 /* UIKit Components */ = {
 			isa = PBXGroup;
 			children = (
+				82353F6C2A49E1A70034A137 /* ScannerView.swift */,
 			);
 			path = "UIKit Components";
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82EEB5F52A42347F00C29AD7 /* ScannerVC.swift in Sources */,
+				82353F6D2A49E1A70034A137 /* ScannerView.swift in Sources */,
 				82EEB5ED2A42110000C29AD7 /* BarcodeScannerView.swift in Sources */,
 				82EEB5DF2A41FC9500C29AD7 /* Barcode_ScannerApp.swift in Sources */,
 			);
